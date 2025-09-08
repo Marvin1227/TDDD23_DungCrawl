@@ -1,0 +1,74 @@
+# ---------------------------------------
+# Unreal Engine 5 — .gitignore
+# Keep: Source/, Config/, Content/ (game assets), Plugins/ (but not their builds), *.uproject
+# Ignore: build artifacts, per-user/editor stuff, IDE junk, OS cruft
+# ---------------------------------------
+
+# --- Core transient dirs (project + any subfolders like Plugins/*) ---
+**/Binaries/
+**/DerivedDataCache/
+**/Intermediate/
+**/Saved/
+
+# Common local output (optional, if you happen to produce these)
+**/Saved/StagedBuilds/
+**/LocalBuilds/
+
+# --- Developer sandboxes (keep shared only) ---
+Content/Developers/**
+!Content/Developers/Shared/**
+!Content/Developers/Shared/**/**
+
+# --- UHT/UBT generated files ---
+*.generated.h
+*.generated.cpp
+
+# --- Project files that can be regenerated ---
+# Visual Studio
+.vs/
+*.sln
+*.suo
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.VC.db
+*.VC.opendb
+
+# Rider / JetBrains
+.idea/
+*.iml
+
+# VS Code (commit only if your team wants shared workspace settings)
+.vscode/
+
+# Xcode
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+*.xcuserstate
+
+# --- OS & editor noise ---
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editors / backups
+*.log
+*.tmp
+*.bak
+*.old
+*.orig
+*.swp
+*~
+
+# --- If the Engine source happens to live inside the repo (rare) ---
+Engine/Binaries/
+Engine/DerivedDataCache/
+Engine/Intermediate/
+Engine/Saved/
